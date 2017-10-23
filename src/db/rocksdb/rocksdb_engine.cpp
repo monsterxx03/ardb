@@ -832,8 +832,8 @@ OP_NAMESPACE_BEGIN
             disablewal=true;
         }
 
-
-        m_options.IncreaseParallelism();
+        // comment this to make max_background_compactions works
+        // m_options.IncreaseParallelism();
         m_options.stats_dump_period_sec = (unsigned int) g_db->GetConf().statistics_log_period;
         m_dbdir = dir;
         return ReOpen(m_options);
